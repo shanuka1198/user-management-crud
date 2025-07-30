@@ -10,7 +10,7 @@ const {
 const routesAuth = require("../middleware/RouteAuth.js");
 const userRouter = express.Router();
 
-userRouter.post("/", register);
+userRouter.post("/auth/register", register);
 userRouter.get("/", routesAuth, getAll);
 userRouter.post("/auth/login", login);
 userRouter.delete("/:id", routesAuth, deleteUser);
